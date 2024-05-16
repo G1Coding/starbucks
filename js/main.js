@@ -1,21 +1,3 @@
-const searchEl = document.querySelector(".search");
-const searchInputEl = searchEl.querySelector("input");
-
-searchEl.addEventListener("click", function () {
-  searchInputEl.focus();
-});
-
-// 입력 창이 focus 되면 통합 검색 보이게
-searchInputEl.addEventListener("focus", function () {
-  searchEl.classList.add("focused");
-  searchInputEl.setAttribute("placeholder", "통합 검색");
-});
-
-// 입력 창이 focus 해제되면
-searchInputEl.addEventListener("blur", function () {
-  searchEl.classList.remove("focused");
-  searchInputEl.setAttribute("placeholder", "");
-});
 
 // 스크롤 내리면 badge 없어지게
 const bedgeEl = document.querySelector("header .badges");
@@ -164,5 +146,3 @@ spyEls.forEach(function (spyEl) {
     .addTo(new ScrollMagic.Controller()); // 특정 섹션들이 화면에 보이는 지를 감시
 });
 
-const thisYear = document.querySelector(".this-year");
-thisYear.textContent = new Date().getFullYear();
